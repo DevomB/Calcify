@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="CalcEval.js" defer></script>
+    <title>Calcify</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://jsxgraph.org/distrib/jsxgraph.css" />
+    <link rel="icon" type="image/x-icon" href="WebsiteIcon.png">
+    <script type="text/javascript" src="https://jsxgraph.org/distrib/jsxgraphcore.js"></script>
+</head>
+<body>
+    <div class="container">
+    <h2>Calcify</h2>
+    <input type="text" id="display" oninput="inputChangeCheck()">
+    <br>
+    <h5 id="Triple Var Warning" hidden>Please note we only support upto triple variable operations </h5>
+    <h5 id="Decimal Float Warning" hidden>Due to computing logistics <var>functionStatus</var>s with decimal points may be inaccurate</h5>
+    <h5 id="Non-Compatable Variables" hidden>Due to computing logistics we only accept the variables "x" , "y", and "z"</h5>
+    <h5 id="Division by Zero Error" hidden>Division by zero is undefined</h5>
+    <h5 id="Invalid Arithmetic Operator" hidden>There is an invalid arithmetic operator inside the <var>functionStatus</var></h5>
+    <br>
+    <button onclick="appendToDisplay('1')">1</button>
+    <button onclick="appendToDisplay('2')">2</button>
+    <button onclick="appendToDisplay('3')">3</button>
+    <button onclick="appendToDisplay('+')">+</button>
+    <br/>
+    <button onclick="appendToDisplay('4')">4</button>
+    <button onclick="appendToDisplay('5')">5</button>
+    <button onclick="appendToDisplay('6')">6</button>
+    <button onclick="appendToDisplay('-')">-</button>
+    <br>
+    <button onclick="appendToDisplay('7')">7</button>
+    <button onclick="appendToDisplay('8')">8</button>
+    <button onclick="appendToDisplay('9')">9</button>
+    <button onclick="appendToDisplay('*')">*</button>
+    <br>
+    <button onclick="clearDisplay()">C</button>
+    <button onclick="appendToDisplay('0')">0</button>
+    <button onclick="calculate()">=</button>
+    <button onclick="appendToDisplay('/')">/</button>
+    </div>
+    <br>
+    <br>
+    <div id="JXGraphPrimary" class="jxgbox" style="width:50%; height:50%; position: absolute; left: 10px;"></div>
+    <div id="JXGraphSecondary" class="jxgbox" style="width:500px; height:500px;" hidden></div>
+
+
+    <script type="text/javascript">
+    var boardPrimary = JXG.JSXGraph.initBoard('JXGraphPrimary', {boundingbox: [-10, 10, 10, -10], axis:true});
+    var boardSecondary = JXG.JSXGraph.initBoard('JXGraphSecondary', {boundingbox: [-10, 10, 10, -10], axis:true});
+    </script>
+</body>
+</html>
