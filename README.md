@@ -1,4 +1,5 @@
-README for Calcify
+# This project is being reset and rebuilt from the ground up with the inclusion of TS
+
 Introduction
 This project aims to create an advanced calculator without using the eval() function or any other function that automatically calculates the answer. The calculator is built with JavaScript and utilizes HTML for the structure. It includes a wide range of features such as mathematical evaluations, decimal float warnings, JXGraphs support, and variable assignments.
 

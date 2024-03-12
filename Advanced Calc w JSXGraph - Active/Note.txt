@@ -1,1 +1,0 @@
-I'm rebuilding the entire front of the website using React
